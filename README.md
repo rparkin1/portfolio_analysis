@@ -188,7 +188,6 @@ Pre-configured mappings for common holdings:
 'AMU03 - U.S. EQUITY INDEX': 'VTI'
 'REIT IDX': 'VGSLX' 
 'Cash': 'BIL'
-'W W Grainger Inc': 'IBM'
 # ... and many more
 ```
 
@@ -257,7 +256,6 @@ getdata/
 ├── pyproject.toml           # Project dependencies and configuration
 ├── uv.lock                  # Dependency lock file
 ├── README.md                # This file
-├── CLAUDE.md                # Development guidelines
 ├── portfolio_holdings_*.csv # Scraped data files (generated)
 └── portfolio_analysis_*.pdf # Analysis reports (generated)
 ```
@@ -285,15 +283,6 @@ getdata/
 - All authentication is handled through the browser interface
 - Rate limiting is applied to API calls to respect service limits
 
-## Contributing
-
-This project follows the guidelines in `CLAUDE.md`. Key points:
-
-- Use `uv` for package management (never pip directly)
-- Add type hints to all functions
-- Follow PEP 8 naming conventions
-- Test thoroughly with realistic data
-- Keep functions focused and small
 
 ## License
 
