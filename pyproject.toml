@@ -1,0 +1,46 @@
+[project]
+name = "getdata"
+version = "0.1.0"
+description = "Portfolio data scraper for Empower"
+requires-python = ">=3.8"
+dependencies = [
+    "selenium>=4.0.0",
+    "pandas>=2.0.0",
+    "webdriver-manager>=4.0.0",
+    "yfinance>=0.2.65",
+    "requests>=2.32.4",
+    "scipy>=1.10.1",
+    "seaborn>=0.13.2",
+    "plotly>=6.2.0",
+    "pandas-datareader>=0.10.0",
+    "reportlab>=4.4.2",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "ruff>=0.1.0",
+    "pyright>=1.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I"]
+fix = true
+
+[tool.ruff.isort]
+known-first-party = ["getdata"]
+
+[tool.pyright]
+include = ["*.py"]
+exclude = ["**/__pycache__"]
+reportMissingImports = true
+reportMissingTypeStubs = false
+pythonVersion = "3.8"
